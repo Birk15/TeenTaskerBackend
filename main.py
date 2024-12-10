@@ -4,6 +4,10 @@ import os
 
 app = create_app()
 
+@app.route('/')
+def home():
+    return "Welcome to my Flask App!"
+
 # Ermöglicht Frontend daten vom Backend zu laden 
 CORS(app)
 
