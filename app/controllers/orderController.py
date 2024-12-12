@@ -14,6 +14,7 @@ def order_add():
         "email": request.form.get("email"),
         "title": request.form.get("title"),
         "description": request.form.get("description"),
+        "category": request.form.get("category"),
         "price": request.form.get("price"),
         "image": image.read()  # Bild als Binärdaten speichern
     }
