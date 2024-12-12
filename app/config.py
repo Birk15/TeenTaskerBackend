@@ -10,7 +10,7 @@ class Config():
     SECRET_KEY = os.getenv('SECRET_KEY', 'mySecretKey')
     DB_URI = os.getenv('DB_URI')
 
-client = MongoClient(Config.DB_URI)
+client = MongoClient(Config.DB_URI, serverSelectionTimeoutMS=10000)
 db = client["TeenTasker"]
 
 # optional - gibt collcetions zurück
